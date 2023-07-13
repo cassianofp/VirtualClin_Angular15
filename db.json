@@ -1,0 +1,120 @@
+{
+  "user": [
+    {
+      "id": "admin",
+      "name": "Admin",
+      "password": "admin123",
+      "email": "admin@virtualclin.com",
+      "role": "admin",
+      "isactive": true
+    },
+    {
+      "id": "cassiano",
+      "name": "Cassiano Pacheco",
+      "password": "cassi123",
+      "email": "cassiano@virtualclin.com",
+      "role": "Nutricionista",
+      "isactive": true
+    },
+    {
+      "id": "lucas",
+      "name": "Professor Lucas",
+      "password": "lucas123",
+      "email": "lucas@virtualclin.com",
+      "role": "Médico",
+      "isactive": true
+    },
+    {
+      "id": "suarez",
+      "name": "Luis Suarez",
+      "password": "suarez123",
+      "email": "suarez123@virtualclin.com",
+      "role": "Médico",
+      "isactive": true
+    },
+    {
+      "id": "luisa",
+      "name": "Luisa Silva",
+      "password": "luisa123",
+      "email": "luisa@virtualclin.com",
+      "role": "Médico",
+      "isactive": true
+    },
+    {
+      "id": "luan",
+      "name": "Luan Messi",
+      "password": "luan123",
+      "email": "luan123@virtualclin.com",
+      "role": "Nutricionista",
+      "isactive": true
+    },
+    {
+      "id": "roberta",
+      "name": "Roberta",
+      "password": "roberta123",
+      "email": "roberta@virtualclin.com",
+      "role": "",
+      "isactive": false
+    },
+    {
+      "id": "kanneman",
+      "name": "Walter",
+      "password": "kanneman123",
+      "email": "kanneman@gremio.com",
+      "role": "",
+      "isactive": false
+    },
+    {
+      "id": "sheron",
+      "name": "Sheron",
+      "password": "sheron123",
+      "email": "sheron@ifsul.com",
+      "role": "Médico",
+      "isactive": true
+    },
+    {
+      "id": "daniel123",
+      "name": "daniel",
+      "password": "daniel123",
+      "email": "daniel@gmail.com",
+      "role": "",
+      "isactive": false
+    }
+  ],
+  "role": [
+    {
+      "id": "medico",
+      "name": "Médico"
+    },
+    {
+      "id": "nutricionista",
+      "name": "Nutricionista"
+    }
+  ],
+  "paciente": [
+    {
+      "firstName": "Calebe",
+      "lastName": "Micael",
+      "email": "calebe@ifsul.com",
+      "dob": "2023-06-06T03:00:00.000Z",
+      "genero": "Masculino",
+      "id": "7Mbv2fm"
+    },
+    {
+      "firstName": "Renato",
+      "lastName": "Portaluppi",
+      "email": "renato@gremio.com",
+      "dob": "2002-12-12T02:00:00.000Z",
+      "genero": "Masculino",
+      "id": "ZMgxRfQ"
+    },
+    {
+      "firstName": "Professor",
+      "lastName": "Lucas",
+      "email": "lucas@ifsul.com",
+      "dob": "2023-02-02T03:00:00.000Z",
+      "genero": "Masculino",
+      "id": "HbGGybP"
+    }
+  ]
+}

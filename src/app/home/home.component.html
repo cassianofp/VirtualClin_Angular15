@@ -1,0 +1,65 @@
+<h1>Registro de Pacientes</h1>
+
+<mat-form-field>
+    <mat-label>Pesquisar</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Fulano" #input>
+</mat-form-field>
+
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort>
+
+        <!-- ID Column -->
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+            <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+        </ng-container>
+
+        <!-- Progress Column -->
+        <ng-container matColumnDef="firstName">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Nome </th>
+            <td mat-cell *matCellDef="let row"> {{row.firstName}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="lastName">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Sobrenome </th>
+            <td mat-cell *matCellDef="let row"> {{row.lastName}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> E-mail </th>
+            <td mat-cell *matCellDef="let row"> {{row.email}} </td>
+        </ng-container>
+
+        <!-- Fruit Column -->
+        <ng-container matColumnDef="dob">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Data de Nascimento </th>
+            <td mat-cell *matCellDef="let row"> {{row.dob | date}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="genero">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Gênero </th>
+            <td mat-cell *matCellDef="let row"> {{row.genero}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Editar </th>
+            <td mat-cell *matCellDef="let row"> 
+                <button mat-button color="primary">Editar</button>
+                <button mat-button color="warn" (click)="deletePaciente(row.id)">Deletar</button>                
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+        <!-- Row shown when there is no matching data. -->
+        <tr class="mat-row" *matNoDataRow>
+            <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+        </tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+</div>
+
+<br><button mat-raised-button (click)="openAddEditEmpForm()" color="primary">ADICIONAR PACIENTE</button>
